@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    /*去掉li的默认样式*/
+    	li{
+    		list-style: none;
+    		padding: 5px;
+    	}
+    /*设置一级li的样式*/
+		.menu1>li{
+			float: left;
+			position: relative;
+			background-color: gray;
+			margin-left: 10px;
+		}
+	/*设置二级菜单默认隐藏*/
+		.menu1>li>ul{
+			display: none;
+		}
+	/*设置二级菜单的样式和位置*/
+		.menu2{
+			position: absolute;
+		    width: 100px;
+		    left: -45px;
+		    top: 22px;
+		}
+		.menu2 li{
+			width: 100px;
+			background-color: red;
+			margin: 5px;
+		}
+	/*设置鼠标滑过的时候显示二级菜单*/
+		.menu1>li:nth-child(1):hover #first{
+			display: block;
+		}
+		.menu1>li:nth-child(2):hover #second{
+			display: block;
+		}
+		.menu1>li:nth-child(3):hover #third{
+			display: block;
+		}
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul class="menu1">
+            <li>一级菜单1
+                <ul class="menu2" id="first">
+                    <li>二级菜单1</li>
+                    <li>二级菜单1</li>
+                    <li>二级菜单1</li>
+                    <li>二级菜单1</li>
+                </ul>
+            </li>
+            <li>一级菜单2
+                <ul class="menu2" id="second">
+                    <li>二级菜单2</li>
+                    <li>二级菜单2</li>
+                    <li>二级菜单2</li>
+                    <li>二级菜单2</li>
+                </ul>
+            </li>
+            <li>一级菜单3
+                <ul class="menu2" id="third">
+                    <li>二级菜单3</li>
+                    <li>二级菜单3</li>
+                    <li>二级菜单3</li>
+                    <li>二级菜单3</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
